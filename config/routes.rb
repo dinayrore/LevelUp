@@ -1,11 +1,8 @@
 Rails.application.routes.draw do
-  root to: 'pages#home'
+  root to: 'pages#index'
 
   get  '/hark',     to: 'pages#hark'
   get 'harks/:name', to: 'posts#index'
-
-  get  '/raven',    to: 'pages#about'
-  get  '/contact',  to: 'pages#contact'
 
   get 'password_resets/new'
   get 'password_resets/edit'
