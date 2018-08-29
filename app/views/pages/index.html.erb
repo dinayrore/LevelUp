@@ -1,0 +1,25 @@
+<div class="homeContainer" ng-controller="PagesIndexController as home">
+
+    <%= video_tag "Particle.mp4", {class: 'homeVideo'}, autoplay: true, loop: true%>
+
+    <div class="homeHeaderContainer">
+        <h2 class="homeHeaderH2">LevelUp!<%= image_tag("level-up-mush.png", :alt => "LevelUp!", :class => "headerIcon") %></h2>
+        <p class="homeHeaderP">Unlock achievements, track your progress, level up!</p>
+    </div>
+
+    <div class="homeBtnContainer">
+    <li class="homeAboutBtn" ng-click=home.scrollBottom()>Guide</li>
+    <li class="homeLoginBtn"><%= link_to "Continue", "/signup" %></li>
+    </div>
+
+<%= render 'layouts/about' %>
+
+<%= render 'layouts/levels' %>
+
+<div class="backToTopBtn" ng-click="home.scrollTop()">
+    Back to Top
+</div>
+
+<%= javascript_include_tag "index", "data-turbolinks-track" => true  %>
+
+</div>
