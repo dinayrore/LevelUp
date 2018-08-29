@@ -78,4 +78,5 @@ Please complete the following procedure to run the program on a live system:
 
 ## Acknowledgments
 
-* Raven G. Waters
+* Samantha Davis
+* Lori Baumgartner
