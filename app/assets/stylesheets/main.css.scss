@@ -2,6 +2,17 @@
 @import "bootstrap";
 @import 'https://fonts.googleapis.com/css?family=Nunito:400,700';
 
+body {
+  background-image: url('/assets/main-background.png');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
 .comment-textbox {
   height: 200px;
   width: 500px;
