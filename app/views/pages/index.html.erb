@@ -1,13 +1,11 @@
-<div class="homeContainer" ng-controller="PagesIndexController as home">
+<div class="container">
 
-    <%= video_tag "Particle.mp4", {class: 'homeVideo'}, autoplay: true, loop: true%>
-
-    <div class="homeHeaderContainer">
+      <div class="row">
         <h2 class="homeHeaderH2">LevelUp!<%= image_tag("level-up-mush.png", :alt => "LevelUp!", :class => "headerIcon") %></h2>
         <p class="homeHeaderP">Unlock achievements, cheer, gain EXP</p>
-    </div>
+      </div>
 
-    <div class="homeBtnContainer">
+    <div class="row">
       <span class='start-btn'>MENU</span>
       <span class='start-btn'>START</span>
     </div>
