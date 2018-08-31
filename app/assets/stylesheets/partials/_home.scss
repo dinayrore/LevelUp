@@ -8,7 +8,7 @@
     margin: 0;
 
     .homeHeaderH2 {
-        font-family: $cabinSketch;
+        font-family: 'Squada One', cursive;
         font-size: 3em;
         text-align: center;
 
@@ -110,7 +110,7 @@
 
     .backToTopBtn {
         @include center();
-        bottom: -10vh;
+        bottom: -115vh;
         border-radius: 5px;
         padding: 10px;
         font-family: $amatica;
@@ -127,7 +127,7 @@
             color: white;
         }
         @include media(995px) {
-            bottom: -10vh;
+            bottom: -115vh;
         }
     }
 }

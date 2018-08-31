@@ -4,12 +4,12 @@
 
     <div class="homeHeaderContainer">
         <h2 class="homeHeaderH2">LevelUp!<%= image_tag("level-up-mush.png", :alt => "LevelUp!", :class => "headerIcon") %></h2>
-        <p class="homeHeaderP">Unlock achievements, track your progress, level up!</p>
+        <p class="homeHeaderP">Unlock achievements, cheer, gain EXP</p>
     </div>
 
     <div class="homeBtnContainer">
-    <li class="homeAboutBtn" ng-click=home.scrollBottom()>Guide</li>
-    <li class="homeLoginBtn"><%= link_to "Continue", "/signup" %></li>
+      <span class='start-btn'>MENU</span>
+      <span class='start-btn'>START</span>
     </div>
 
 <%= render 'layouts/about' %>
