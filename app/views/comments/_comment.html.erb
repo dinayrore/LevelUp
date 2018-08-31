@@ -1,0 +1,7 @@
+<%= form_for @post do |f| %>
+<form class="addComment" name="commentForm">
+		<%= f.label :achievements %><br>
+		<%= f.text_field :achievements, class: 'form-control' %><br>
+		<%= f.submit class: 'button' %>
+    <!-- <button type="button">Comment</button> -->
+</form>

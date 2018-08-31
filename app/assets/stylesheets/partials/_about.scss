@@ -1,10 +1,8 @@
-.aboutContainer {
-    position: absolute;
-    top: 100vh;
-    background: rgba(black, .3);
-    @include media(437px) {
-        background: $black;
-    }
+.aboutBox {
+  position: absolute;
+  width: 100%;
+  left: 0;
+}
 
     .aboutH2 {
         text-align: center;
@@ -37,59 +35,6 @@
     }
 }
 
-.bulbInfoContainer {
-    position: absolute;
-    bottom: -80vh;
-    background: rgba(black, .3);
-    @include media(1205px) {
-        bottom: -466px;
-    }
-    @include media(1088px) {
-        bottom: -487px;
-    }
-    @include media(995px) {
-        bottom: -510px;
-    }
-    @include media(965px) {
-        background: $black;
-        bottom: -540px;
-    }
-    @include media(903px) {
-        bottom: -565px;
-    }
-    @include media(820px) {
-        bottom: -595px;
-    }
-    @include media(762px) {
-        bottom: -630px;
-    }
-    @include media(736px) {
-        bottom: -670px;
-    }
-    @include media(683px) {
-        bottom: -690px;
-    }
-    @include media(677px) {
-        bottom: -840px;
-    }
-    @include media(617px) {
-        bottom: -981px;
-    }
-    @include media(525px) {
-        bottom: -1030px;
-    }
-    @include media(522px) {
-        bottom: -1097px;
-    }
-    @include media(455px) {
-        bottom: -1150px;
-    }
-    @include media(408px) {
-        bottom: -1220px;
-    }
-    @include media(385px) {
-        bottom: -1260px;
-    }
 
     .bulbInfoUL {
         .bulbInfoLI {
