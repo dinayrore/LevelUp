@@ -1,9 +1,11 @@
-@import url( 'https://fonts.googleapis.com/css?family=Amatic+SC|Open+Sans');
+@import 'https://fonts.googleapis.com/css?family=Amatic+SC|Open+Sans';
+@import 'https://fonts.googleapis.com/css?family=Cabin+Sketch';
 @import 'https://fonts.googleapis.com/css?family=Squada+One';
 @import 'https://fontlibrary.org/face/press-start-2p';
 
 $amatica: 'Amatic SC', cursive;
 $open: 'Open Sans', sans-serif;
+$cabinSketch: 'Cabin Sketch', cursive;
 $black: #232323;
 $gradient: radial-gradient(ellipse at center, rgba(19,19,19,1) 0%, rgba(76,76,76,1) 100%);
 $box-shadow: 0 0 9px 0 rgba(0,0,0,0.5);

@@ -11,14 +11,10 @@
  * It is generally better to create a new file per style scope.
  *
  */
+ @import "main";
  @import "partials/variables";
- @import "partials/mixins";
- @import "partials/reset";
  @import "partials/home";
  @import "partials/about";
- @import "partials/animations";
- @import "partials/nav";
  @import "partials/userHome";
- @import "partials/bulbsIndex";
  @import "partials/buttons";
- @import "partials/menuButton";
+ @import "partials/fontello";

@@ -1,66 +1,35 @@
 .aboutBox {
+  display: block;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  padding: 30px 15px;
   position: absolute;
   width: 100%;
   left: 0;
+  background: rgba(0,0,0,0.3);
+
 }
 
-    .aboutH2 {
-        text-align: center;
-        font-family: 'Squada One', cursive;;
-        font-size: 2em;
-        margin-top: 20px;
-        color: white;
-    }
-
-    .aboutLI {
-        float: left;
-        padding: 15px 5px 15px 15px;
-        width: 33.33%;
-        font-family: $open;
-        color: white;
-        line-height: 1.5;
-        @include media(561px) {
-            width: 100%;
-        }
-
-        h2 {
-            font-family: $amatica;
-            font-size: 2em;
-        }
-
-        p {
-            font-family: $open;
-            line-height: 1.5;
-        }
-    }
+.aboutH2 {
+  text-align: center;
+  font-family: $cabinSketch;
+  font-size: 2em;
+  margin-top: 20px;
+  color: white;
 }
 
+h2 {
+  font-family: $amatica;
+  font-size: 2em;
+  display: inline;
+}
 
-    .bulbInfoUL {
-        .bulbInfoLI {
-            color: white;
-            float: left;
-            width: 25%;
-            padding: 15px 5px 15px 15px;
-            @include media(616px) {
-                width: 100%;
-            }
+p {
+  font-family: $open;
+  line-height: 1.5;
+}
 
-            h2 {
-                font-family: $amatica;
-                font-size: 2em;
-                display: inline;
-            }
-
-            p {
-                font-family: $open;
-                line-height: 1.5;
-            }
-
-            .homeFooterIcon {
-                width: 25px;
-                display: inline;
-            }
-        }
-    }
+.homeFooterIcon {
+  width: 25px;
+  display: inline;
 }

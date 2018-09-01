@@ -1,6 +1,5 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@import 'https://fonts.googleapis.com/css?family=Nunito:400,700';
 
 .alert-alert {
   @extend .alert-danger;
@@ -14,8 +13,9 @@
   @extend .alert-success;
 }
 
-.box {
-    margin-bottom: 20px;
-    padding: 30px 15px;
-    background: rgba(0,0,0,0.3);
+body {
+  background: #f7f7f7 url(https://css-tricks.com/examples/RoundButtons/images/bg.png) repeat center top;
+}
+
+footer {
 }
