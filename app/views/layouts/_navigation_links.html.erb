@@ -1,47 +1,24 @@
 <%# add navigation links to this file %>
-<li>
-    <%= link_to 'Home', root_path %>
-</li>
-<li>
-    <%= link_to 'LevelUp', '/about' %>
-</li>
-<% if logged_in? %>
-      <li>
-          <%= link_to "Logout", '/logout', method: "delete" %>
-      </li>
-      <li>
-          <%= link_to "My Stats", '/my-stats' %>
-      </li>
-<% else %>
-      <li>
-          <%= link_to 'Signup', '/signup' %>
-      </li>
-      <li>
-          <%= link_to 'Login', '/login'  %>
-      </li>
-<% end %>
-
-
-
 <nav>
-    <ul class="nav">
+    <ul class="nav-nav">
         <li>
           <a href="#">
-            <span class="icon-home"></span>
+            <span class="fas fa-home"></span>
           </a>
       	</li>
         <li>
           <a href="#">
-            <span class="fas fa-cog"></span>
-          </a></li>
+            <span class="fas fa-user-cog"></span>
+          </a>
+        </li>
         <li>
       		<a href="#">
-            <span class="icon-cw"></span>
+            <span class="fas fa-trophy"></span>
           </a>
       	</li>
         <li>
           <a href="#">
-            <span class="icon-location"></span>
+            <span class="fas fa-sign-out-alt"></span>
           </a>
         </li>
     </ul>
