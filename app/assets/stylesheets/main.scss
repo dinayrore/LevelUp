@@ -1,6 +1,10 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+body {
+  background: #f7f7f7 url(https://css-tricks.com/examples/RoundButtons/images/bg.png) repeat center top;
+}
+
 .alert-alert {
   @extend .alert-danger;
 }
@@ -13,9 +17,6 @@
   @extend .alert-success;
 }
 
-body {
-  background: #f7f7f7 url(https://css-tricks.com/examples/RoundButtons/images/bg.png) repeat center top;
-}
-
 footer {
+  padding-top: 900px;
 }

@@ -4,3 +4,28 @@
   width: 50%;
   padding-top: 150px;
 }
+
+.infoBox {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+.infoLI h2 {
+    font-family: "Amatic SC", cursive;
+    font-size: 2em;
+    display: inline;
+}
+
+.infoLI p {
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.5;
+}
+
+.homeIcons {
+  display: inline;
+  vertical-align: bottom;
+}

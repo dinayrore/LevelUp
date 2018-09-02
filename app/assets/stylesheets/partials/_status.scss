@@ -1,0 +1,17 @@
+.statusBox {
+  display: block;
+  box-sizing: border-box;
+  margin-top: 550px;
+  margin-bottom: 20px;
+  padding: 30px 15px;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  background: rgba(0,0,0,0.3);
+}
+
+.statusIcons {
+  width: 25px;
+  display: inline;
+  vertical-align: top;
+}

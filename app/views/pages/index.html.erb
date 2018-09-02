@@ -1,29 +1,12 @@
 <div class="container">
 
-      <div class="row">
-        <%= image_tag("level-up.png", alt: "LevelUp!", class: "title") %></h2>
-        <!-- <%= image_tag("level-up-mush.png", alt: "1up mushroom", class: "titleImage") %></h2> -->
-      </div>
+      <%= image_tag("level-up.png", alt: "LevelUp!", class: "title") %></h2>
+          <!-- <%= image_tag("level-up-mush.png", alt: "1up mushroom", class: "titleImage") %></h2> -->
 
-    <div class="row">
-      <nav>
-          <ul class="nav">
-              <li>
-                <a href="#">
-                  <span class="fas fa-cog"></span>
-                </a>
-            	</li>
-              <li>
-                <a href="#">
-                  <span class="fas fa-power-off"></span>
-                </a>
-            	</li>
-          </ul>
-      </nav>​
-    </div>
+      <%= render 'layouts/homeButtons' %>
 
-<%= render 'layouts/about' %>
+      <%= render 'layouts/about' %>
 
-<!-- <%= render 'layouts/levels' %> -->
+      <%= render 'layouts/status' %>
 
 </div>
