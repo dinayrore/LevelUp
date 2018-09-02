@@ -1,6 +1,6 @@
 <% provide(:title, "Sign up to LevelUp!") %>
 
-<body class="text-center">
+<div class="text-center">
     <form class="form-signin">
       <%= image_tag("level-up-mush.png", alt: "LevelUp!", style: "width: 72px;" ) %>
       <%= form_for(@user, url: signup_path) do |f| %>
@@ -23,4 +23,4 @@
 
       <% end %>
     </form>
-</body>
+</div>

@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   root to: 'pages#index'
 
-  get  '/hark',     to: 'pages#hark'
-  get 'harks/:name', to: 'posts#index'
+  get  '/community-dash',     to: 'posts#index'
+  get 'conmmunity-dash/:name', to: 'posts#show'
 
   get 'password_resets/new'
   get 'password_resets/edit'

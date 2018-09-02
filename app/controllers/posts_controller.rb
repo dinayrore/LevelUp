@@ -2,8 +2,7 @@ class PostsController < ApplicationController
 	before_action :admin_user, only: [:new, :create, :edit, :update, :destroy]
 
 	def index
-		tag = Tag.find_by(name: params[:name])
-		@posts = tag.posts
+		@posts = Post.all
 	end
 
 	def new
