@@ -1,9 +1,9 @@
 <% provide(:title, "Login to LevelUp!") %>
 
 <div class="text-center">
-    <form class="form-signin">
+    <div class="form-signin">
       <%= image_tag("level-up-mush.png", alt: "LevelUp!", style: "width: 72px;" ) %>
-      <%= form_for(:session, url: login_path) do |f| %>
+      <%= form_for(:session, url: login_url) do |f| %>
         <h3>Login to LevelUp!</h3>
 
           <%= link_to 'Sign up', signup_path, class: 'pull-right'  %>
@@ -23,5 +23,5 @@
 
           <%= f.submit 'LevelUp!', class: 'btn btn-lg btn-primary btn-block' %>
       <% end %>
-    </form>
+    </div>
 </div>

@@ -9,7 +9,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    redirect_to(signup_url) unless @user.activated?
+    redirect_to(root_url) unless @user.activated?
   end
 
   def new
@@ -21,9 +21,9 @@ class UsersController < ApplicationController
     if @user.save
       @user.send_activation_email
       flash[:warning] = "Please check your email to activate your account."
-      redirect_to root_url
+      redirect_to "/community"
     else
-      render 'new'
+      render "new"
     end
   end
 

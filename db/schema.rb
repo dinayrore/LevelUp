@@ -10,42 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180902160538) do
+ActiveRecord::Schema.define(version: 20180902203544) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "comments", force: :cascade do |t|
-    t.text     "body"
-    t.integer  "post_id"
-    t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["post_id"], name: "index_comments_on_post_id", using: :btree
-    t.index ["user_id"], name: "index_comments_on_user_id", using: :btree
-  end
-
-  create_table "posts", force: :cascade do |t|
-    t.string   "title"
-    t.text     "body"
-    t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_posts_on_user_id", using: :btree
-  end
-
-  create_table "posts_tags", id: false, force: :cascade do |t|
-    t.integer "post_id"
-    t.integer "tag_id"
-    t.index ["post_id"], name: "index_posts_tags_on_post_id", using: :btree
-    t.index ["tag_id"], name: "index_posts_tags_on_tag_id", using: :btree
-  end
-
-  create_table "tags", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
@@ -62,9 +30,4 @@ ActiveRecord::Schema.define(version: 20180902160538) do
     t.datetime "updated_at",                        null: false
   end
 
-  add_foreign_key "comments", "posts"
-  add_foreign_key "comments", "users"
-  add_foreign_key "posts", "users"
-  add_foreign_key "posts_tags", "posts"
-  add_foreign_key "posts_tags", "tags"
 end

@@ -32,6 +32,3 @@ class CommentsController < ApplicationController
 		params.require(:comment).permit(:body)
   end
 end
-
-
-# currently deleting a comment deletes the post...? check model relations on Code Karma to verify here... you're getting there keep it up!

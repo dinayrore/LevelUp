@@ -5,6 +5,20 @@ body {
   background: #f7f7f7 url(https://css-tricks.com/examples/RoundButtons/images/bg.png) repeat center top;
 }
 
+#error_explanation {
+  ul {
+    margin: 0 0 30px 0;
+    list-style: none;
+  }
+}
+
+.field_with_errors {
+  @extend .has-error;
+  .form-control {
+    color: $state-danger-text;
+  }
+}
+
 .alert-alert {
   @extend .alert-danger;
 }

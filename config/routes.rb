@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   root to: 'pages#index'
 
-  get  '/community-dash',     to: 'posts#index'
-  get 'conmmunity-dash/:name', to: 'posts#show'
+  get  '/community',     to: 'posts#index'
+  get 'conmmunity/:name', to: 'posts#show'
 
   get 'password_resets/new'
   get 'password_resets/edit'
@@ -19,4 +19,6 @@ Rails.application.routes.draw do
   resources :posts, shallow: true do
   	resources :comments, only: [:create, :destroy]
   end
+
+  default_url_options host: "example.com"
 end
