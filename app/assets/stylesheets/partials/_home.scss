@@ -1,17 +1,19 @@
+h2 {
+  font-family: $amatica;
+  font-size: 2em;
+  display: inline;
+}
+
+p {
+  font-family: $open;
+  line-height: 1.5;
+}
+
 .title {
   display: block;
   margin: auto;
   width: 50%;
   padding-top: 150px;
-}
-
-.infoBox {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
 }
 
 .infoLI h2 {
@@ -28,4 +30,18 @@
 .homeIcons {
   display: inline;
   vertical-align: bottom;
+}
+
+.aboutH2 {
+  text-align: center;
+  font-family: $cabinSketch;
+  font-size: 2em;
+  margin-top: 20px;
+  color: white;
+}
+
+.statusIcons {
+  width: 25px;
+  display: inline;
+  vertical-align: top;
 }

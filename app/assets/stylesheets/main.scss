@@ -17,6 +17,18 @@ body {
   @extend .alert-success;
 }
 
-footer {
-  padding-top: 1150px;
+.box {
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 30px 15px;
+    background: #fff;
+    background: rgba(0,0,0,0.3);
+}
+
+@media screen and (min-width:1200px) {
+    .box:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
 }
