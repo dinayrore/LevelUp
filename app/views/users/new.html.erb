@@ -2,12 +2,12 @@
 
 <body class="text-center">
     <form class="form-signin">
-      <%= image_tag("level-up-mush.png", :alt => "LevelUp!", :class => "headerIcon") %>
+      <%= image_tag("level-up-mush.png", alt: "LevelUp!", style: "width: 72px;" ) %>
       <%= form_for(@user, url: signup_path) do |f| %>
-        <h3>SignUp/LevelUp!</h3><br>
+        <h3 class="h3 mb-3 font-weight-normal" style="font-family: 'Cabin Sketch', cursive;">SignUp/LevelUp!</h3><br>
         <%= render 'shared/error_messages' %>
           <%= f.label :name %>
-          <%= f.text_field :name, :autofocus => true, class: 'form-control' %><br>
+          <%= f.text_field :name, autofocus: true, class: 'form-control' %><br>
 
           <%= f.label :email %>
           <%= f.email_field :email, class: 'form-control' %><br>
@@ -18,8 +18,8 @@
           <%= f.label :password_confirmation %>
           <%= f.password_field :password_confirmation, class: 'form-control' %><br>
 
-          <%= f.submit "LevelUp!", class: "btn btn-lg btn-primary btn-block" %>
-          <%= link_to 'Log in', login_path, class: 'right'  %><br>
+          <%= f.submit "LevelUp!", class: "btn btn-lg btn-primary btn-block" %><br>
+          <%= link_to 'Log in', login_path, class: 'btn btn-lg btn-info btn-block'  %><br>
 
       <% end %>
     </form>
