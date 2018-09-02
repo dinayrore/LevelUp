@@ -10,32 +10,41 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170614235725) do
+ActiveRecord::Schema.define(version: 20180902160538) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "comments", force: :cascade do |t|
     t.text     "body"
-    t.integer  "status_id"
+    t.integer  "post_id"
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["status_id"], name: "index_comments_on_status_id", using: :btree
+    t.index ["post_id"], name: "index_comments_on_post_id", using: :btree
     t.index ["user_id"], name: "index_comments_on_user_id", using: :btree
   end
 
-  create_table "statuses", force: :cascade do |t|
+  create_table "posts", force: :cascade do |t|
+    t.string   "title"
+    t.text     "body"
     t.integer  "user_id"
-    t.text     "achievement"
-    t.text     "obstacle"
-    t.text     "goal"
-    t.integer  "likes",       default: 0
-    t.integer  "panic_score", default: 0
-    t.boolean  "is_deleted",  default: false
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
-    t.index ["user_id"], name: "index_statuses_on_user_id", using: :btree
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_posts_on_user_id", using: :btree
+  end
+
+  create_table "posts_tags", id: false, force: :cascade do |t|
+    t.integer "post_id"
+    t.integer "tag_id"
+    t.index ["post_id"], name: "index_posts_tags_on_post_id", using: :btree
+    t.index ["tag_id"], name: "index_posts_tags_on_tag_id", using: :btree
+  end
+
+  create_table "tags", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -43,7 +52,7 @@ ActiveRecord::Schema.define(version: 20170614235725) do
     t.string   "email"
     t.string   "password_digest"
     t.string   "remember_digest"
-    t.boolean  "team",              default: false
+    t.boolean  "admin",             default: false
     t.string   "activation_digest"
     t.boolean  "activated",         default: false
     t.datetime "activated_at"
@@ -53,7 +62,9 @@ ActiveRecord::Schema.define(version: 20170614235725) do
     t.datetime "updated_at",                        null: false
   end
 
-  add_foreign_key "comments", "statuses"
+  add_foreign_key "comments", "posts"
   add_foreign_key "comments", "users"
-  add_foreign_key "statuses", "users"
+  add_foreign_key "posts", "users"
+  add_foreign_key "posts_tags", "posts"
+  add_foreign_key "posts_tags", "tags"
 end
