@@ -1,0 +1,22 @@
+<nav class="nav">
+    <ul class="nav">
+        <li>
+          <a href="#settings">
+            <span class="fas fa-cog"></span>
+          </a>
+        </li>
+        <% if logged_in? %>
+          <li>
+            <a href="/home">
+              <span class="fas fa-power-off"></span>
+            </a>
+          </li>
+        <% else %>
+          <li>
+            <a href="/signup">
+              <span class="fas fa-power-off"></span>
+            </a>
+          </li>
+        <% end %>
+    </ul>
+</nav>​

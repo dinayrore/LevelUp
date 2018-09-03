@@ -1,0 +1,11 @@
+<%= render 'layouts/navigation' %>
+
+<% if logged_in? %>
+
+  <%= render 'posts/form' %>
+
+<% else %>
+
+  <%= render 'pages/index' %>
+
+<% end %>

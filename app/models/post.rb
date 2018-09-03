@@ -1,12 +1,10 @@
 class Post < ApplicationRecord
-  has_many :comments, dependent: :destroy
+  validates :achievements, presence: true
+  validates :obstacles, presence: true
+  validates :goals, presence: true
+  validates :panic_score, format: { with: /\d/ }
+
   belongs_to :user
-
-  after_create do
-    post = Post.find_by(id: self.id)
-  end
-
-  before_update do
-    post = Post.find_by(id:self.id)
-  end
+  default_scope -> { order(created_at: :desc) }
+  has_many :comments, dependent: :destroy
 end

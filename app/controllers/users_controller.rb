@@ -43,7 +43,7 @@ class UsersController < ApplicationController
 
   def destroy
     User.find(params[:id]).destroy
-    flash[:success] = "Walk in Harmony - User Deleted"
+    flash[:success] = "User Deleted"
     redirect_to users_url
   end
 
@@ -54,20 +54,12 @@ class UsersController < ApplicationController
                                    :password_confirmation)
     end
 
-    def logged_in_user
-      unless logged_in?
-        store_location
-        flash[:danger] = "Please log in."
-        redirect_to login_url
-      end
-    end
-
     def correct_user
       @user = User.find(params[:id])
       redirect_to(root_url) unless current_user?(@user)
     end
 
     def admin_user
-      redirect_to(root_url) unless current_user.try(:admin?)
+      redirect_to(root_url) unless current_user.admin?
     end
 end

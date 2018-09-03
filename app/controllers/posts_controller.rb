@@ -1,5 +1,7 @@
 class PostsController < ApplicationController
-	before_action :admin_user, only: [:new, :create, :edit, :update, :destroy]
+	before_action :logged_in_user, only: [:index, :edit, :update, :destroy]
+  before_action :correct_user,   only: [:edit, :update]
+  before_action :admin_user,     only: [:destroy]
 
 	def index
 		@posts = Post.all
@@ -14,18 +16,15 @@ class PostsController < ApplicationController
 	end
 
 	def create
-		if current_user.try(:admin?)
-			@post = Post.new(post_params)
-			@post.user_id = current_user.id
-			if @post.save
-				flash[:success] = "We are as one my sister. Your post has been saved."
-				redirect_to @post
-			else
-				flash[:danger] = "Existance is mysterious. Your post was not saved."
-				render 'new'
-			end
+    @post = current_user.posts.build post_params
+    if @post.save
+			flash[:success] = "Status Complete!"
+			redirect_to @post
+    else
+			flash[:danger] = "Status Failed..."
+			render 'new'
 		end
-	end
+  end
 
 	def edit
 		@post = Post.find(params[:id])
@@ -36,10 +35,10 @@ class PostsController < ApplicationController
 			@post = Post.find(params[:id])
 			@post.user_id = current_user.id
 			if @post.update(params[:post].permit(:title, :body))
-				flash[:success] = "Walk In Harmony. Your post has been updated."
+				flash[:success] = "Status Update Complete!"
 				redirect_to @post
 			else
-				flash[:danger] = "There is disquiet within you. Your post was not updated."
+				flash[:danger] = "Status Update Failed..."
 				render 'edit'
 			end
 		end
@@ -60,10 +59,6 @@ class PostsController < ApplicationController
 	private
 
 	def post_params
-		params.require(:post).permit(:title, :body)
-	end
-
-	def admin_user
-		redirect_to(root_url) unless current_user.try(:admin?)
+		params.require(:post).permit(:achievements, :obstacles, :goals, :panic_score)
 	end
 end

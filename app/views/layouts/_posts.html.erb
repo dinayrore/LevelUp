@@ -1,0 +1,39 @@
+<% @posts.each do |post| %>
+<div class="col-lg-3 col-md-4 col-xs-6">
+      <ol>
+        <small>
+            <li>
+              <i type="button" name="followBtn" class="fas fa-user-plus"></i>
+              <!-- <i type="button" name="unfollowBtn" class="fas fa-user-minus"></i> -->
+              <%= post.user.name %>
+            </li>
+            <li>
+                <p class='likes'>Likes: <% post.likes %></p>
+                <nav name="likeBtn" class="fas fa-heart likeBtn"></nav>
+                <ul class="nav-like">
+                    <li>
+                      <a>
+                        <span class="fas fa-heart likeBtn"></span>
+                      </a>
+                    </li>
+            </li>
+            <li>
+              <%= image_tag("red-mush.png", :alt => "achievements", :class => "statusIcons") %>
+              <%= post.achievements %>
+            </li>
+            <li>
+              <%= image_tag("poison-mush.png", :alt => "obstables", :class => "statusIcons") %>
+              <%= post.obstacles %>
+            </li>
+            <li>
+              <%= image_tag("super-star.png", :alt => "goals", :class => "statusIcons") %>
+              <%= post.goals %>
+            </li>
+            <li>
+              <%= image_tag("block.png", :alt => "panic score", :class => "statusIcons") %>
+              <% post.panic_score %>
+            </li>
+        </small>
+      </ol>
+</div>
+<% end %>

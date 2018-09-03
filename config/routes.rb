@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   get  '/community',     to: 'posts#index'
   get 'conmmunity/:name', to: 'posts#show'
 
+  get '/home', to: 'pages#home'
+
   get 'password_resets/new'
   get 'password_resets/edit'
 

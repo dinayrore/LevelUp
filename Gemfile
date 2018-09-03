@@ -22,6 +22,7 @@ gem 'bootstrap-will_paginate', '1.0.0'
 gem 'greensock-rails', '~> 1.18', '>= 1.18.2.0'
 
 group :development, :test do
+  gem 'pry-rails', '~> 0.3.4'
   gem 'byebug', platform: :mri
 end
 

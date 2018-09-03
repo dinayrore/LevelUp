@@ -77,8 +77,14 @@
   background: #f5f5f5;
 }
 
-.nav-nav a:link, .nav a:visited {
+.nav-navbar a:link, .nav a:visited {
   width: 100px;
   height: 100px;
   line-height: 100px;
+}
+
+.nav-like a:link, .nav a:visited {
+  width: 75px;
+  height: 75px;
+  line-height: 75px;
 }

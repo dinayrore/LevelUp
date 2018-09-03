@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
       if user.activated?
         log_in user
         params[:session][:remember_me] == '1' ? remember(user) : forget(user)
-        redirect_to communitydash_url
+        redirect_to "/community"
       else
         message  = "Your account has not been activated. Please check your email for an activation link."
         flash[:warning] = message
