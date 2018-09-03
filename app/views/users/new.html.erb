@@ -5,7 +5,7 @@
       <%= image_tag("level-up-mush.png", alt: "LevelUp!", style: "width: 72px;" ) %>
       <h3 class="h3 mb-3 font-weight-normal", style="font-family: 'Cabin Sketch', cursive;">SignUp/LevelUp!</h3><br>
       <%= form_for(@user, url: signup_path) do |f| %>
-        <%= render 'shared/error_messages' %>
+        <%= render 'shared/user_error_messages' %>
 
           <%= f.label :name %>
           <%= f.text_field :name, autofocus: true, class: 'form-control' %><br>

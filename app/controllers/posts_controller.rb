@@ -19,10 +19,10 @@ class PostsController < ApplicationController
     @post = current_user.posts.build post_params
     if @post.save
 			flash[:success] = "Status Complete!"
-			redirect_to @post
+			redirect_to '/community'
     else
 			flash[:danger] = "Status Failed..."
-			render 'new'
+			render 'pages/home'
 		end
   end
 

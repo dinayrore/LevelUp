@@ -1,11 +1,20 @@
+<% provide(:title, 'My Home Page') %>
+
 <%= render 'shared/navigation' %>
 
-<% if logged_in? %>
+<div class="container">
 
-  <%= render 'posts/form' %>
+  <% if logged_in? %>
 
-<% else %>
+    <%= render 'posts/form' %>
+    <%= render 'layouts/userButtons' %>
+    <%= render 'layouts/stats' %>
+    <%= render 'layouts/history' %>
 
-  <%= render 'pages/index' %>
+  <% else %>
 
-<% end %>
+    <%= render 'pages/index' %>
+
+  <% end %>
+
+</div>

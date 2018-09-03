@@ -10,13 +10,11 @@
   list-style: none;
   text-align: center;
   font-size: 50px;
-  margin: 20px;
 }
 
 .nav li {
   position: relative;
   display: inline-block;
-  margin-right: -4px;
 }
 
 .nav li:before {
@@ -42,11 +40,11 @@
   background-image: -o-linear-gradient(top, #f7f7f7, #e7e7e7);
   color: #a7a7a7;
   margin: 36px;
-  width: 144px;
-  height: 144px;
+  width: 125px;
+  height: 125px;
   position: relative;
   text-align: center;
-  line-height: 144px;
+  line-height: 100px;
   border-radius: 50%;
   box-shadow: 0px 3px 8px #aaa, inset 0px 2px 3px #fff;
   border: solid 1px transparent;
@@ -81,10 +79,4 @@
   width: 100px;
   height: 100px;
   line-height: 100px;
-}
-
-.nav-like a:link, .nav a:visited {
-  width: 75px;
-  height: 75px;
-  line-height: 75px;
 }
