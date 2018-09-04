@@ -13,8 +13,13 @@
   max-width: 100%;
 }
 
+.statusList {
+  list-style: none;
+}
+
 .commentList {
     margin-top: 10px;
+    list-style: none;
 
     li {
         border-radius: 5px;
