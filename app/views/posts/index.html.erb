@@ -2,12 +2,16 @@
 
 <% provide(:title, "Community Dashboard") %>
 
-<div class="container">
+<div class="container statusContainer">
 
-    <div class="row">
+  <h1 class="text-center text-lg-left">Community Status Updates</h1>
+
+  <div class="row">
 
         <%= render 'layouts/posts' %>
 
-    </div>
-    
+  </div>
+
+  <%= render 'shared/footer' %>
+
 </div>

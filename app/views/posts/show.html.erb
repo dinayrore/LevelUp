@@ -1,49 +1,19 @@
 <%= render 'shared/navigation' %>
 
-<div class="bulbCard" ng-repeat="bulb in timeline.allBulbs">
+<div class="container statusContainer">
 
-      <ul class="bulbList">
+  <div class="row">
 
-          <li>
-              <p>{{bulb.bulb_writer}}</p>
-          </li>
+        <%= render 'layouts/post' %>
 
-          <li>
-              <p class='likes' ng-hide="bulb.show" ng-model="bulb.likes">Likes:
-                  {{bulb.likes}}</p>
-              <p class='likes' ng-show="bulb.show">Likes:
-                  {{timeline.newLike}}</p>
-              <button type="button" name="likeBtn" class="likeBtn" ng-click="timeline.incrementLikes(bulb, bulb.likes, bulb.bulb_id)">Like</button>
-          </li>
+        <div class="container statusContainer">
 
-          <li>
-              <%= image_tag("brightbulb.png", :alt => "lamp by Elves Sousa from the Noun Project", :class => "bulbIcon") %>
-              <p>{{bulb.bright}}</p>
-          </li>
+          <div class="row">
+              <%= render 'comments/form' %>
+          </div>
 
-          <li>
-              <%= image_tag("dimbulb.png", :alt => "lamp by Elves Sousa from the Noun Project", :class => "bulbIcon") %>
-              <p>{{bulb.dim}}</p>
-          </li>
+        </div>
 
-          <li>
-              <%= image_tag("blocker.png", :alt => "wall by TDL-LONDON from the Noun Project", :class => "bulbIcon") %>
-              <p>{{bulb.blocked}}</p>
-          </li>
-
-          <li>
-              <%= image_tag("panic.png", :alt => "Head by Eliricon from the Noun Project", :class => "bulbIcon") %>
-              <p>Panic Score:{{bulb.panic_score}}</p>
-          </li>
-
-          <ul class=commentList ng-repeat="comment in bulb.comment_data">
-              <li>
-                  <p>"{{comment.comment}}"</p>
-              </li>
-          </ul>
-
-  </ul>
-
-  <%= render 'comments/form' %>
+    </div>
 
 </div>
