@@ -1,73 +1,77 @@
-.statusContainer {
-    width: 100vw;
-    background: $background;
+.statusContainer h1 {
+      text-align: center;
+      font-size: 3em;
+      font-family: $cabinSketch;
 }
 
 .statusCard {
-    margin: 20px auto;
-    font-size: 14px;
-    width: 55%;
-    border-radius: 5px;
-    padding: 20px;
-    background-color: #15202e;
-    box-shadow: $box-shadow;
-    position: relative;
-    clear: both;
-    font-family: $open;
-
-    li {
-        padding: 10px;
-
-        .statusIcon {
-            width: 20px;
-            display: inline;
-            float: left;
-        }
-
-        p {
-            display: inline;
-            margin-left: 10px;
-        }
-
-        .likes {
-            position: absolute;
-            right: 30px;
-            top: 28px;
-        }
-
-        .likeBtn {
-            position: absolute;
-            right: 30px;
-            top: 55px;
-            letter-spacing: 3px;
-            padding: 0 10px;
-            font-size: 1.5em;
-        }
-    }
-
-    .commentList {
-        margin-top: 10px;
-
-        li {
-            border-radius: 5px;
-            font-style: italic;
-            color: rgba(black, .5);
-            background: $innerBorderColor;
-        }
-    }
-
-    .addComment {
-        padding: 10px;
-
-        input {
-            width: 75%;
-        }
-
-        button {
-            width: 23%;
-            letter-spacing: 3px;
-            padding: 2px 0;
-            font-size: 14px;
-        }
-    }
+  margin: 27px;
+  border-radius: 5px;
+  padding: 20px;
+  background: white;
+  position: relative;
+  box-shadow: $box-shadow;
+  max-width: 100%;
 }
+
+
+
+
+
+
+
+    // li {
+    //     padding: 10px;
+    //
+    //     .statusIcon {
+    //         width: 20px;
+    //         display: inline;
+    //         float: left;
+    //     }
+    //
+    //     p {
+    //         display: inline;
+    //         margin-left: 10px;
+    //     }
+    //
+    //     .likes {
+    //         position: absolute;
+    //         right: 30px;
+    //         top: 28px;
+    //     }
+    //
+    //     .likeBtn {
+    //         position: absolute;
+    //         right: 30px;
+    //         top: 55px;
+    //         letter-spacing: 3px;
+    //         padding: 0 10px;
+    //         font-size: 1.5em;
+    //     }
+    // }
+    //
+    // .commentList {
+    //     margin-top: 10px;
+    //
+    //     li {
+    //         border-radius: 5px;
+    //         font-style: italic;
+    //         color: rgba(black, .5);
+    //         background: $innerBorderColor;
+    //     }
+    // }
+    //
+    // .addComment {
+    //     padding: 10px;
+    //
+    //     input {
+    //         width: 75%;
+    //     }
+    //
+    //     button {
+    //         width: 23%;
+    //         letter-spacing: 3px;
+    //         padding: 2px 0;
+    //         font-size: 14px;
+    //     }
+    // }
