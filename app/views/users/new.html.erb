@@ -2,8 +2,8 @@
 
 <div class="text-center">
     <div class="form-signin">
-      <%= image_tag("level-up-mush.png", alt: "LevelUp!", style: "width: 72px;" ) %>
-      <h3 class="h3 mb-3 font-weight-normal", style="font-family: 'Cabin Sketch', cursive;">SignUp/LevelUp!</h3><br>
+      <%= link_to image_tag("level-up-mush.png", alt: "LevelUp!", class: "signinImg"), root_url %>
+      <h3 class="h3 mb-3 font-weight-normal signinH3">SignUp 2 LevelUp!</h3><br>
       <%= form_for(@user, url: signup_path) do |f| %>
         <%= render 'shared/user_error_messages' %>
 

@@ -1,47 +1,50 @@
-h2 {
+h2.titles {
   font-family: $amatica;
   font-size: 2em;
   display: inline;
 }
 
-p {
+p.titleP {
+  margin-top: 10px;
   font-family: $open;
   line-height: 1.5;
 }
 
-.title {
+.titleBox {
+  margin-bottom: 20px;
+  padding: 30px 15px;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.titleImg {
   display: block;
   margin: auto;
   width: 50%;
   padding-top: 150px;
 }
 
-.infoLI h2 {
-    font-family: "Amatic SC", cursive;
-    font-size: 2em;
-    display: inline;
-}
-
-.infoLI p {
-    font-family: "Open Sans", sans-serif;
-    line-height: 1.5;
-}
-
-.titleIcons {
+.titleAboutIcons {
   display: inline;
   vertical-align: bottom;
+}
+
+.titleAboutIconEXP {
+  vertical-align: top;
+}
+
+.titleStatusIcons {
+  width: 25px;
+  display: inline;
+  vertical-align: top;
+}
+
+.aboutHeader {
+    margin-bottom: 20px;
 }
 
 .aboutH2 {
   text-align: center;
   font-family: $cabinSketch;
   font-size: 2em;
-  margin-top: 20px;
   color: white;
-}
-
-.statusIcons {
-  width: 25px;
-  display: inline;
-  vertical-align: top;
 }

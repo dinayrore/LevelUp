@@ -2,9 +2,9 @@
 
 <div class="text-center">
     <div class="form-signin">
-      <%= image_tag("level-up-mush.png", alt: "LevelUp!", style: "width: 72px;" ) %>
+      <%= link_to image_tag("level-up-mush.png", alt: "LevelUp!", class: "signinImg"), root_url %>
       <%= form_for(:session, url: login_url) do |f| %>
-        <h3>Login to LevelUp!</h3>
+        <h3 class="h3 mb-3 font-weight-normal signinH3">Login 2 LevelUp!</h3>
 
           <%= link_to 'Sign up', signup_path, class: 'pull-right'  %>
           <%= f.label :email, class: 'pull-left' %>

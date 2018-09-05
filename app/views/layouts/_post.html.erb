@@ -3,8 +3,11 @@
     <ul class="statusList">
       <li>
         <% if @post.user.name == current_user.name %>
-        <button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button>
-        <button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button>
+        <div class="editButtons">
+          <%= render 'buttons/editButtons' %>
+
+        </div>
+
         <% end %>
       </li>
 
@@ -13,7 +16,7 @@
         <!-- <button class="fas fa-user-plus"></button> -->
         <!-- else if user is following...unfollow -->
         <!-- <i type="button" name="unfollowBtn" class="fas fa-user-minus"></i> -->
-        <b><%= @post.user.name %> Status</b>
+        <h2><%= @post.user.name %> Status</h2>
       </li>
       <li>
         <p>Likes: <b><%= @post.likes %></b></p>
@@ -37,11 +40,11 @@
 
         <ul class="commentList">
               <% @post.comments.each do |comment| %>
-                <li class="commentList"><%= comment.user.name %>: <%= comment.comment %></li>
-                <% if comment.user.name == current_user.name %>
-                <button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button>
-                <button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button>
-                <% end %>
+                <li class="commentList"><%= comment.user.name %>: <%= comment.comment %>
+                  <% if comment.user.name == current_user.name %>
+                      <%= render 'buttons/editButtons' %>
+                  <% end %>
+                </li>
               <% end %>
         </ul>
 
