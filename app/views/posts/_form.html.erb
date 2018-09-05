@@ -8,23 +8,23 @@
 					<%= form_for @post do |f| %>
           <%= render 'shared/post_error_messages' %>
 
-						<%= image_tag("red-mush.png", :alt => "achievements", :class => "statusIcons") %>
-						<%= f.label :achievements %><br>
-						<%= f.text_field :achievements, class: 'form-control' %><br>
+						<%= image_tag("red-mush.png", alt: "achievements", class: "statusIconForm") %>
+						<%= f.label :achievements %>
+						<%= f.text_area :achievements, class: 'form-control' %>
 						<br>
-						<%= image_tag("poison-mush.png", :alt => "obstables", :class => "statusIcons") %>
-						<%= f.label :obstacles %><br>
-						<%= f.text_area :obstacles, class: 'form-control' %><br>
+						<%= image_tag("poison-mush.png", alt: "obstables", class: "statusIconForm") %>
+						<%= f.label :obstacles %>
+						<%= f.text_area :obstacles, class: 'form-control' %>
 						<br>
-						<%= image_tag("super-star.png", :alt => "goals", :class => "statusIcons") %>
-						<%= f.label :goals %><br>
-						<%= f.text_area :goals, class: 'form-control' %><br>
+						<%= image_tag("super-star.png", alt: "goals", class: "statusIconForm") %>
+						<%= f.label :goals %>
+						<%= f.text_area :goals, class: 'form-control' %>
 						<br>
-						<%= image_tag("block.png", :alt => "panic score", :class => "statusIcons") %>
-						<%= f.label :panic_score %><br>
-						<%= f.text_area :panic_score, class: 'form-control' %><br>
+						<%= image_tag("block.png", alt: "panic score", class: "statusIconForm") %>
+						<%= f.label :panic_score %>
+						<%= f.text_field :panic_score, class: 'form-control' %>
 						<br>
-						<%= f.submit class: 'button center' %>
+						<%= f.submit 'Create Status', class: 'btn btn-info' %>
 					<% end %>
         </div>
     </div>

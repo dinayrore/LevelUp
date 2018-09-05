@@ -3,24 +3,24 @@
        <ol class="statusList">
          <small>
              <li class="text-center">
-               <h2><%= post.user.name %> Status</h2>
-               <p><%= post.created_at.strftime("%B %d, %Y") %></p>
+               <h2 class="statusH2"><%= post.user.name %> Status</h2>
+               <p class="statusP"><%= post.created_at.strftime("%B %d, %Y") %></p>
              </li>
              <li>
-               <p style="vertical-align: middle;"><%= image_tag("red-mush.png", alt: "achievements", class: "statusIcons") %>
+               <p class="statusP"><%= image_tag("red-mush.png", alt: "achievements", class: "statusIcons") %>
                <%= post.achievements %></p>
              </li>
              <li>
-               <%= image_tag("poison-mush.png", alt: "obstables", class: "statusIcons") %>
-               <%= post.obstacles %>
+               <p class="statusP"><%= image_tag("poison-mush.png", alt: "obstables", class: "statusIcons") %>
+               <%= post.obstacles %></p>
              </li>
              <li>
-               <%= image_tag("super-star.png", alt: "goals", class: "statusIcons") %>
-               <%= post.goals %>
+               <p class="statusP"><%= image_tag("super-star.png", alt: "goals", class: "statusIcons") %>
+               <%= post.goals %></p>
              </li>
              <li>
-               <%= image_tag("block.png", alt: "panic score", class: "statusIcons") %>
-               <%= post.panic_score %>
+               <p class="statusP"><%= image_tag("block.png", alt: "panic score", class: "statusIcons") %>
+               <%= post.panic_score %></p>
              </li>
          </small>
        </ol>

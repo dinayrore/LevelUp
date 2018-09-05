@@ -13,11 +13,29 @@
   max-width: 100%;
 }
 
-ol {
+.statusIconForm {
+  width: 25px;
+  display: inline;
+  vertical-align: top;
+}
+
+.statusIcons {
+  width: 25px;
+  display: inline;
+  vertical-align: top;
+}
+
+p.statusP {
+  font-family: $open;
+  line-height: 1.5;
+  vertical-align: middle;
+}
+
+ol.statusOl {
   list-style: none;
 }
 
-h2 {
+h2.statusH2 {
     font-family: "Amatic SC", cursive;
     font-size: 2em;
     display: inline;
