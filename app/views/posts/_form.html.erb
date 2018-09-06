@@ -8,19 +8,19 @@
 					<%= form_for @post do |f| %>
           <%= render 'shared/post_error_messages' %>
 
-						<%= image_tag("red-mush.png", alt: "achievements", class: "statusIconForm") %>
+						<%= image_tag("red-mush.png", alt: "achievements", class: "statusFormIcons") %>
 						<%= f.label :achievements %>
 						<%= f.text_area :achievements, class: 'form-control' %>
 						<br>
-						<%= image_tag("poison-mush.png", alt: "obstables", class: "statusIconForm") %>
+						<%= image_tag("poison-mush.png", alt: "obstables", class: "statusFormIcons") %>
 						<%= f.label :obstacles %>
 						<%= f.text_area :obstacles, class: 'form-control' %>
 						<br>
-						<%= image_tag("super-star.png", alt: "goals", class: "statusIconForm") %>
+						<%= image_tag("super-star.png", alt: "goals", class: "statusFormIcons") %>
 						<%= f.label :goals %>
 						<%= f.text_area :goals, class: 'form-control' %>
 						<br>
-						<%= image_tag("block.png", alt: "panic score", class: "statusIconForm") %>
+						<%= image_tag("block.png", alt: "panic score", class: "statusFormIcons") %>
 						<%= f.label :panic_score %>
 						<%= f.text_field :panic_score, class: 'form-control' %>
 						<br>

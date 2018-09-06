@@ -1,8 +1,12 @@
 <% @posts.each do |post| %>
-   <div class="col-lg-3 col-md-4 col-xs-6 statusCard">
+   <div class="col-lg-3 col-md-4 col-xs-4 statusCard">
        <ol class="statusList">
            <li class="text-center">
-             <h2 class="statusH2"><%= post.user.name %> Status</h2>
+            <% if post.user.name == current_user.name %>
+              <h2 class="statusH2">My Status</h2>
+            <% else %>
+              <h2 class="statusH2"><%= post.user.name %> Status</h2>
+            <% end %>
              <p class="statusP"><%= post.created_at.strftime("%B %d, %Y") %></p>
            </li>
            <li>
@@ -22,6 +26,7 @@
              <%= post.panic_score %>
            </li>
        </ol>
-       <%= link_to 'See More', post, class: "btn btn-default pull-right" %>
+
+       <%= link_to "View", post, class: "btn btn-default pull-right" %>
    </div>
  <% end %>

@@ -13,14 +13,14 @@
   max-width: 100%;
 }
 
-.statusIconForm {
-  width: 25px;
+.statusIcons {
+  width: 20px;
   display: inline;
-  vertical-align: top;
+  vertical-align: bottom;
 }
 
-.statusIcons {
-  width: 25px;
+.statusFormIcons {
+  width: 30px;
   display: inline;
   vertical-align: top;
 }
@@ -28,7 +28,6 @@
 p.statusP {
   font-family: $open;
   line-height: 1.5;
-  vertical-align: middle;
 }
 
 ol.statusOl {
@@ -45,6 +44,50 @@ h2.statusH2 {
     list-style: none;
     margin: 10px;
 }
+
+.teamStatus {
+  background-color: #15202e;
+  margin: 32px;
+  border-radius: 5px;
+  padding: 32px;
+  position: relative;
+  box-shadow: $box-shadow;
+  max-width: 100%;
+  height: 100%
+}
+
+.teamListStatus {
+  padding: 10px 0;
+  border: 1px solid rgba(255, 255, 255, .1);
+  border-radius: 4px;
+  white-space: nowrap;
+  background-color: rgba(255,255, 255, .1);
+
+}
+
+// .sidenavR {
+//   background-color: #111;
+//   height: 100%;
+//   overflow-x: hidden;
+//   padding-top: 60px;
+//   position: fixed;
+//   right: 0;
+//   top: 0;
+//   transition: .5s;
+//   width: 0;
+//   z-index: 1;
+// }
+// .sidenavR a {
+//   color: #818181;
+//   display: block;
+//   font-size: 25px;
+//   padding: 8px 8px 8px 32px;
+//   text-decoration: none;
+//   transition: .3s;
+// }
+// .sidenav a:hover,.offcanvas a:focus,.sidenavR a:hover,.offcanvas a:focus{color:#f1f1f1;}
+// .sidenav .closebtn,.sidenavR .closebtn{font-size:36px;margin-left:50px;position:absolute;right:25px;top:0;}
+
 
 .commentList {
     margin-top: 10px;
